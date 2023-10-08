@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Admission</title>
+        <style>
+
+            /* ------ general styles ------ */
+
+            @import url("common/general styles.css");
+
+            /* ------ Header Styles ------ */
+
+            @import url("common/header.css");
+
+            /* ------ Footer Style ------ */
+
+            @import url("common/footer.css");
+
+            /* ------ Course Style ------ */
+
+            @import url("common/Course styles.css");
+
+            ol p
+            {
+                display: list-item;
+            }
+
+            .bull::before
+            {
+                content: '•';
+                font-weight: bold;
+            }
+
+            #course h3
+            {
+                cursor: pointer;
+            }
+
+            #course h3::before
+            {
+                content: "Admission@ ";
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <header>
+            
+            <img src="image/logo.png" alt="college-logo">
+            
+            <div>
+                <h2>premium institute Of education</h2>
+
+                <nav>
+                    <ul>
+                        <li><a href="javascript:history.back()">Back</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notices.html">Noticeboard</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+
+        <main>
+            
+            <div id = "course">
+
+                <h1>Admission 2018-2019</h1>
+
+                <a href="admission form.html" class = "course-info">
+                    <strong>Apply Now (You have not applied before)</strong>
+                </a>
+
+                <h2>Admission Info.</h2>
+
+                <h3 onclick="display(0)">General Information</h3>
+
+                <div id = "General-Information"></div>
+
+                <h3 onclick="display(1)">Recognised Boards</h3>
+
+                <div id="Recognised-Boards"></div>
+
+                <h3 onclick="display(2)">Eligibility Criteria</h3>
+
+                <div id = "Eligibility-Criteria"></div>
+
+                <h3 onclick="display(3)">Elective Combinations</h3>
+
+                <div id = "Elective-Combinations"></div>
+
+                <h3 onclick="display(4)">Ask for Refund</h3>
+
+                <div id = "Ask-for-Refund"></div>
+
+                <p>
+                    For Further Details and Information<br>Check out: <a href="Courses.html">UG Courses at PIE</a>
+                </p>
+
+            </div>
+            
+            <div id = "course-requirements">
+                <h4>Admission Query</h4>
+                
+                <div class="additional-info">
+
+                    <p>
+                        System Control Room
+                        <br>2th Floor College Campus
+                        <br>10am-1pm (Mon-Fri)
+                    </p>
+
+                    <p>
+                        Ph No.: +91 983111 0762
+                    </p>
+                    
+                    <a href="mailto: admission@PIE.edu.in">
+                        email: admission@PIE.edu.in
+                    </a>
+
+                </div>
+
+                <h4>Warning</h4>
+                
+                <p class = "additional-info">
+                    Beware of bandits claiming to have links in the College for direct admission bypassing
+                    the process mention herein. Students are requested not to become victim of such traps
+                    as the College may not allow indulgence in such unlegal method of admission.
+                </p>
+                
+            </div>
+
+        </main>
+
+        <footer>
+
+            <p>Copyright &copy; 2018 Premium Institute of Education</p>
+
+        </footer>
+
+        <script>
+            var text = [];
+
+            // for General-Information
+
+            text[0] = '<div class="course-info">\
+                    <p class="bull">\
+                        The College has an online application process. There won\'t be any physical distribution of forms.\
+                    </p>\
+                    <p class="bull">\
+                        After application and payment of the application fee, please keep checking the website for the merit list.\
+                        Don\'t make inquiries with the college, the list will be uploaded on the college website.\
+                    </p>\
+                    <p class="bull">\
+                        On being merit listed, you shall receive an SMS and email on your registered mobile/ email ID.\
+                        Please follow the instruction given in the email.\
+                    </p>\
+                    <p class="bull">\
+                        There is no need to submit your application form, fee challan or any other document to the college\
+                        office. Please keep them with you for your records.\
+                    </p>\
+                    <p class="bull">\
+                        <b>Students with compartmental or fail result in Class XII board examinations are not eligible to apply\
+                        for any courses in the College.</b>\
+                    </p>\
+                </div>';
+
+            // for Recognised-Boards
+
+            text[1] = '<ol class="course-info">\
+                    <li>Council for the Indian School Certificate Examination (ISC)</li>\
+                    <li>Central Board of Secondary Education (CBSE)</li>\
+                    <li>West Bengal Council of Higher Secondary Education (WBCHSE)</li>\
+                    <li>National Institute of Open Schooling (NIOS)</li>\
+                    <li>Assam Higher Secondary Education Council</li>\
+                    <li>Banasthali Vidyapith</li>\
+                    <li>Bhutan Council for School Examination and assessment</li>\
+                    <li>Bihar Intermediate Education Council</li>\
+                    <li>Bihar School Examination Board</li>\
+                    <li>Board of Intermediate and Secondary Education, Barisal Bangladesh</li>\
+                    <li>Board of Intermediate and Secondary Education, Jessore Bangladesh</li>\
+                    <li>Board Of Intermediate Education Andhra Pradesh</li>\
+                    <li>Board of Secondary Education, Madhya Pradesh, Bhopal</li>\
+                    <li>Board of Secondary Education, Rajasthan</li>\
+                    <li>Chhattisgarh Board of Secondary Education</li>\
+                    <li>Council Of Higher Secondary Education Manipur</li>\
+                    <li>Council Of Higher Secondary Education, Odisha</li>\
+                    <li>Goa Board of Secondary and Higher Secondary Education</li>\
+                    <li>Government Of Karnataka Dept. Of Pre-University Education</li>\
+                    <li>Gujarat Secondary and Higher Secondary Education Board</li>\
+                    <li>Haryana Board Of School Education</li>\
+                    <li>Government of Nepal National Examinations Board</li>\
+                    <li>Himachal Pradesh Board of School Education</li>\
+                    <li>IGCSE Programme From University Of Cambridge (International Exam)</li>\
+                    <li>International Baccalaureate</li>\
+                    <li>Jammu and kashmir Board of School Education</li>\
+                    <li>Jharkhand Academic Council, Ranchi</li>\
+                    <li>Karnataka Secondary Education Examination Board</li>\
+                    <li>Kerala Board Of Higher Secondary Education</li>\
+                    <li>Kerala Board of Public Examination</li>\
+                    <li>M.P. State Open School</li>\
+                    <li>Maharashtra State Board of Secondary and Higher Secondary Education</li>\
+                    <li>Meghalaya Board of School Education</li>\
+                    <li>Mizoram Board of School Education</li>\
+                    <li>Nagaland Board of School Education</li>\
+                    <li>Punjab School Education Board</li>\
+                    <li>Rabindra Mukta Vidyalaya, West Bengal</li>\
+                    <li>Tamil Nadu State Board of School Examination</li>\
+                    <li>Tamilnadu Board Of Higher Secondary Education</li>\
+                    <li>Telangana Sate Board of Intermediate Education</li>\
+                    <li>Tripura Board of Secondary Education</li>\
+                    <li>Uttar Pradesh Board of High School and Intermediate Education</li>\
+                    <li>Uttaranchal Shiksha Evm Pariksha Parishad (NEE: Board of School Education Uttarakhand)</li>\
+                    <li>West Bengal Board of Madrasah Education</li>\
+                    <li>West Bengal State Council Of Vocational Education And Training</li>\
+                </ol>';
+
+            // for Eligibility-Criteria
+
+            text[2] = '<div class="course-info">\
+                    <p class="bull">\
+                        A candidate who has passed the Higher Secondary (10+2) or its equivalent examination is eligible\
+                        to seek admission to the first Semester of the three-year (six semesters) B.A. / B.Sc. / B.Com.\
+                        / BBA (Honours) Courses provided he/ she has also passed in English, the full marks not being\
+                        less than 100 and fulfils the conditions given below.\
+                    </p>\
+                    <p class="bull">\
+                        No candidate shall be allowed admission after a lapse of over five years from the year of passing\
+                        the previous qualifying examination or discontinuation of recognised regular course of studies\
+                        after passing the previous qualifying examination. The year of admission shall not be considered\
+                        while calculating five years from the year of passing the previous qualifying examination, i.e.,\
+                        a candidate should have passed the previous qualifying examination not before March 2013.\
+                        <br>Please Note - Candidates who are already registered with Calcutta University under Annual\
+                        System (1+1+1 Regulations), are not eligible to apply for any of the courses.\
+                    </p>\
+                    <p class="bull">\
+                        Candidates who have passed the Higher Secondary (10+2) Examination or its equivalent from CBSE,\
+                        CISCE (ISC), WBCHSE (WB Board) and National Institute of Open Schooling, need not submit the\
+                        Migration Certificate for registration under the University of Calcutta.\
+                    </p>\
+                    <p class="bull">\
+                        Candidates belonging to the Scheduled Caste or Scheduled Tribe community taking up honours\
+                        course must have a minimum of 40% marks in the aggregate or 40% marks in the subject or\
+                        related subject at the previous qualifying examination, as the case may be (applies to\
+                        holders of valid certificates from the state of West Bengal only).\
+                    </p>\
+                    <p class="bull">\
+                        Aggregate marks shall be calculated by adding the marks in top-four subjects in order of marks\
+                        secured by a candidate. However, marks in compulsory Environmental Education/ Studies shall not\
+                        be considered for calculation of aggregate marks. If the subject “Environmental Science” is\
+                        studied as an elective subject of 100 marks, it may be taken into account to determine the\
+                        aggregate marks.\
+                    </p>\
+                </div>\
+                <a class="course-info" href="Courses.html">\
+                    For Additional course-specific criteria for admission. Kindly check out the specific course.\
+                </a>';
+
+            // for Elective-Combinations
+
+            text[3] = '<h4>Arts (Generic Electives (Any Two))</h4>\
+                <div class="course-info">\
+                    <p><em>English (H)</em></p>\
+                    <p>\
+                        History / Political Science/ Bengali or Hindi / Education or Film Studies / Sociology/\
+                        Journalism & Mass Communication or Geography or Psychology\
+                    </p>\
+                    <p><em>Bengali (H)</em></p>\
+                    <p>\
+                        History /Political Science /Sociology / Journalism & Mass Communication Psychology /Film Studies\
+                    </p>\
+                    <p><em>History (H)</em></p>\
+                    <p>\
+                        Education or Film Studies / Sociology /Political Science /Geography or Psychology or Journalism &\
+                        Mass Communication / English /Bengali or Hindi\
+                    </p>\
+                    <p><em>Political Sc. (H)</em></p>\
+                    <p>\
+                        Education or Film Studies / History / Sociology / Geography / English / Bengali or Hindi /\
+                        Psychology or Journalism & Mass Communication\
+                    </p>\
+                    <p><em>Sociology (H)</em></p>\
+                    <p>\
+                        Education or Film Studies / History /Political Science /Geography or Psychology or Journalism\
+                        & Mass Communication / English /Bengali or Hindi\
+                    </p>\
+                    <p><strong>\
+                        As per CU guidelines, Film Studies & Psychology cannot be taken together, opt for either of the two.\
+                    </strong></p>\
+                </div>\
+                <h4>Science (Generic Electives (Any Two))</h4>\
+                <div class="course-info">\
+                    <p><em>Economics (H)</em></p>\
+                    <p>\
+                        Mathematics(compulsory) / Computer Science / Statistics\
+                    </p>\
+                    <p><em>Physics (H)</em></p>\
+                    <p>\
+                        Mathematics(compulsory) / Chemistry / Computer Science / Electronics\
+                    </p>\
+                    <p><em>Chemistry (H)</em></p>\
+                    <p>\
+                        Mathematics(compulsory) / Physics\
+                    </p>\
+                    <p><em>Computer Science (H)</em></p>\
+                    <p>\
+                        Mathematics(compulsory) / Physics / Electronics / Statistics\
+                    </p>\
+                    <p><em>Electronics (H)</em></p>\
+                    <p>\
+                        Mathematics(compulsory) / Physics / Computer Science\
+                    </p>\
+                    <p><em>Mathematics (H)</em></p>\
+                    <p>\
+                        Physics / Chemistry / Computer Science / Electronics / Statistics\
+                    </p>\
+                </div>';
+
+            // for Ask-for-Refund
+
+            text[4] = '<p class="additional-info">\
+                    How Dare You! Get lost from this Website...\
+                </p>';
+
+            var id_list = ["General-Information", "Recognised-Boards", "Eligibility-Criteria", "Elective-Combinations", "Ask-for-Refund"];
+
+            var check = [1, 1, 1, 1, 1];
+        </script>
+
+        <script src="common/collasp.js"></script>
+    
+    </body>
+</html>

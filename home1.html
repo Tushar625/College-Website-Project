@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Premium Institute Of Education </title>
+        <style>
+                /* ------ general styles ------ */
+
+                @import url("common/general styles.css");
+
+                /* ------ Header Styles ------ */
+
+                @import url("common/header.css");
+
+                /* ------ Footer style ------ */
+
+                @import url("common/footer.css");
+
+                /* ------ Main Body Styles ------ */
+
+                @font-face {
+                    font-family: Snell;
+                    src: url("snell-roundhand/SnellBT-Bold.otf");
+                }
+
+                /* Setting the image of our campus as a fixed background */
+
+                main div#campus
+                {
+                    height: 50vmax;     /* Stting the height hight enough to see the complete image */
+                    margin: 0;
+                    padding: 0;
+                    background: rgba(222, 199, 135, 0.199) url(image/campus.jpg) no-repeat center;
+                    background-size: contain;
+                    background-attachment: fixed;   /*mbedd the image to the background*/
+                }
+
+                /* We style the overview about our college */
+
+                main div#overview
+                {
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    padding: 1.5em;
+                    background-color: beige;
+                }
+
+                /* a flex item */
+
+                main div#overview fieldset
+                {
+                    color:rgb(7, 65, 7);
+                    border: green 2px dashed;
+                    background-color: rgba(99, 204, 109, 0.886);
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    flex: 1 0 15em;
+                    text-align: justify;
+                    padding: 1em;
+                    margin: 1.5em;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                main div#overview fieldset h4
+                {
+                    font-style: italic;
+                    align-self: flex-start;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    margin-top: -.05em;
+                }
+
+                main div#overview fieldset p
+                {
+                    margin: 0;
+                    text-indent: 3em;
+                    line-height: 2em;
+                    margin-bottom: auto;
+                }
+
+                /* links in the overview region */
+
+                main div#overview a
+                {
+                    display: block;
+                    background-color: rgba(167, 250, 193, 0.904);
+                    width: 100%;
+                    margin-top: 1.5em;
+                    color: rgba(12, 93, 72, 0.782);
+                    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    padding: .3em;
+                    text-align: center;
+                    text-transform: capitalize;
+                    font-size: .75em;
+                    letter-spacing: 3px;
+                    line-height: 3em;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    /* border: 2px outset; */
+                }
+
+                /*main div#overview a:focus,*/ main div#overview a:hover
+                {
+                    background-color: rgba(5, 255, 255, 0.23);
+                }
+
+                main div#overview a:active
+                {
+                    background-color: rgba(5, 255, 255, 0.381);
+                }
+
+                /* ------ Defining pic-box class */
+
+                main .pic-box
+                {
+                    padding: 1em;
+                    padding-bottom: 0;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 3em;
+                }
+
+                main .pic-box > h2
+                {
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 200;
+                    letter-spacing: 5px;
+                    font-size: 1.5em;
+                    text-transform: capitalize;
+                    padding: 0;
+                }
+
+                .pic-box .pic
+                {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                .pic img
+                {
+                    display: block;
+                    width: 70%;
+                    flex: 1 1 auto;
+                    margin: 1em;
+                    border-radius: 20px;
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.403);
+                }
+
+                .pic p
+                {
+                    border: 1px dashed;
+                    padding: .5em;
+                    text-align: center;
+                    line-height: 2em;
+                    margin: 1em;
+                    flex: 0 0 12em;
+                }
+
+                .pic-box ul
+                {
+                    background-clip: content-box;
+                    border: 2px inset;
+                    border-radius: 50px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: .3em;
+                }
+
+                /* ------ Event Gallary style ------  */
+
+                #Events
+                {
+                    background-color: rgb(110, 153, 182);
+                }
+
+                #Events h2
+                {
+                    color: white;
+                }
+
+                #Events p
+                {
+                    color: white;
+                }
+
+                #Events ul
+                {
+                    background-color: rgb(132, 188, 225);
+                }
+
+                /* ------ Upcoming Events ------ */
+
+                #upcoming-events
+                {
+                    background-color: rgb(246, 246, 207);
+                    /* color: tomato; */
+                    color: rgb(255, 101, 41);
+                    padding: 1em;
+                    padding-bottom: 2em;
+                }
+
+                #upcoming-events h1
+                {
+                    font-family: Snell, cursive;
+                    font-weight: 100;
+                    font-size: 2.5em;
+                    text-align: center;
+                    padding: 1em;
+                    margin: 1em;
+                }
+
+                #upcoming-events li
+                {
+                    display: flex;
+                    align-items: center;
+                    border-radius: 20px;
+                    background-color: rgba(255, 252, 47, 0.178);
+                    margin: .5em 3em;
+                    border: 2px dashed;
+                }
+
+                #upcoming-events li img
+                {
+                    display: block;
+                    width: 4em;
+                    flex: 0 0 auto;
+                    margin: .5em;
+                    border-radius: 10px;
+                }
+
+                #upcoming-events li p
+                {
+                    margin: 1em;
+                    padding: 1em;
+                    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+                }
+
+                #upcoming-events li h2
+                {
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 400;
+                    letter-spacing: 5px;
+                    font-size: 1.5em;
+                }
+
+                /* ------ Safty style ------ */
+
+                #safty
+                {
+                    /* margin: 1em 0; */
+                    padding: 2em;
+                    /* text-align: center; */
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgb(243, 243, 243);
+                }
+
+                #safty a
+                {
+                    margin: 1em 3em;
+                }
+
+                #safty a img
+                {
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px rgba(23, 17, 33, 0.238);
+                }
+
+                /* ------ Quick Links style ------ */
+
+                #q-links
+                {
+                    background-color: rgb(243, 243, 243);
+                    padding: .5em;
+                    padding-top: 0;
+                }
+
+                #q-links > ul
+                {
+                    /* border: solid; */
+                    background-color: rgb(188, 233, 231);
+                    border-radius: 10px;
+                    max-width: 45em;
+                    margin: auto;   /* Set the ul in center */
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+
+                #q-links ul li
+                {
+                    flex: 0 0 6em;
+                    text-align: center;
+                    margin: .3em 1em;
+                }
+
+                /* we modify the links a little bit to make them suitable for headers */
+
+                #q-links a
+                {
+                    color: rgb(4, 111, 111);
+                    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: .7em;
+                    letter-spacing: 2px;
+                }
+
+                /*#q-links a:focus,*/ #q-links a:hover
+                {
+                    color: rgb(18, 172, 164);
+                }
+
+                #q-links a:active
+                {
+                    color: rgb(255, 195, 136);
+                }
+                
+        </style>
+    </head>
+    <body>
+        <header>
+            
+            <img src="image/logo.png" alt="college-logo">
+            
+            <div>
+                <h2>premium institute Of education</h2>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Noticeboard</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                        <!-- <li><a href="#">Log in</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+        <main>
+
+            <!-- Setting the image of our campus as a fixed background -->
+
+            <div id = "campus"></div>
+
+            <!-- overview -->
+
+            <div id = "overview">
+                <fieldset>
+                    <h4>Why us ...</h4>
+                    <p>
+                        We are a leading college in the region, committed to provide
+                        our students with a quality education that will prepare them for
+                        success in their careers.
+                    </p>
+                    <a href = "#">career opportunities</a>
+                </fieldset>
+                <fieldset>
+                    <h4>What we offer ...</h4>
+                    <p>
+                        We offer a variety of programs and courses, including undergraduate
+                        and graduate degrees, as well as certificate programs and skill
+                        enhancement workshops.
+                    </p>
+                    <a href = "Courses.html">on demand courses</a>
+                </fieldset>
+                <fieldset>
+                    <h4>Welcome friends ...</h4>
+                    <p>
+                        We are proud to offer a diverse and inclusive campus community.
+                        We are committed to creat an environment where everyone feels
+                        welcome and supported.
+                    </p>
+                    <a href = "#">campus community</a>
+                </fieldset>
+            </div>
+            
+            <!-- key features -->
+
+            <!-- events gallary view horizontal scroll list -->
+
+            <div id = "Events" class = "pic-box">
+                <h2>Past events of 2018</h2>
+                <div class = "pic">
+                    <img src="image/holi.jpg">
+                    <p>Festival of Colors 2018</p>
+                </div>
+                <ul>
+                    <li><input type = "radio" name = "option" value = "0"></li>
+                    <li><input type = "radio" name = "option" value = "1"></li>
+                    <li><input type = "radio" name = "option" value = "2" checked></li>
+                    <li><input type = "radio" name = "option" value = "3"></li>
+                    <li><input type = "radio" name = "option" value = "4"></li>
+                    <li><input type = "radio" name = "option" value = "5"></li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Events -->
+
+            <div id = "upcoming-events">
+                <h1>Upcoming Events</h1>
+                <ul>
+                    <li>
+                        <img src="image/Graduate Party.jpg" alt="Graduate party">
+                        <p>
+                            11th<br>Sep
+                        </p>
+                        <h2>Graduate Party</h2>
+                    </li>
+                    <li>
+                        <img src="image/prom night.jpg" alt="Prom night party">
+                        <p>
+                            21st<br>Nov
+                        </p>
+                        <h2>Prom Night</h2>
+                    </li>
+                    <li>
+                        <img src="image/new year.jpg" alt="new year party">
+                        <p>
+                            31st<br>Dec
+                        </p>
+                        <h2>New Year Party</h2>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ragging free and zero tolerance -->
+
+            <div id = "safty">
+                <a href="#"> <img src="image/anti-ragging.png" alt="anti-ragging"></a>
+                <a href="#"> <img src="image/sexual-harassment.png" alt="sexual-harassment"></a>
+            </div>
+
+            <!-- awards and recognitions -->
+
+            <!-- <div id = "award">
+
+
+            </div> -->
+
+            <!-- Quick links -->
+
+            <div id = "q-links">
+                <ul>
+                    <li><a href = "login.html">Login</a></li>
+                    <li><a href = "#">Notice</a></li>
+                    <li><a href = "#">Library</a></li>
+                </ul>
+            </div>
+
+        </main>
+
+        <footer>
+
+            <p>Copyright &copy; 2018 Premium Institute of Education</p>
+
+        </footer>
+
+        <script>
+
+            function setEventImg()
+            {
+                var text = ["Best College in The Milkey Way", "Educational Trip to Washington D.C. 2018", "Festival of Colors 2018", 'Seminar - "Age of AI"<br>By - Prof. Tom Hanks', "Freshers Party 2018", "Tech Fair 2018"];
+
+                var image = ["image/best college.jpg", "image/trip.jpg", "image/holi.jpg", "image/speech.jpg", "image/party.jpg", "image/waiting room.jpg"];
+                
+                var img = document.querySelector("#Events img");
+                
+                var opt = document.querySelector("#Events input[name = 'option']:checked").value;
+                
+                img.setAttribute("src", image[opt]);
+
+                document.querySelector("#Events p").innerHTML = text[opt];
+            }
+
+            document.querySelector("#Events > ul").addEventListener("click", setEventImg);
+        </script>
+    </body>
+</html>

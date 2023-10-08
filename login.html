@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Log-in</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			/* ------ general styles ------ */
+
+			@import url("common/general styles.css");
+
+			/* ------ Footer style ------ */
+
+			@import url("common/footer.css");
+
+			/* Disable resizing in android devices */
+
+            :root
+			{
+                touch-action: pan-x pan-y;
+                height: 100%;
+            }
+
+			footer
+			{
+				padding: .1em;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				/* background-color: white; */
+			}
+
+			footer img
+			{
+				width: 4em;
+				padding: 1em;
+			}
+
+			footer p
+			{
+				color: white;
+				text-align: left;
+				font-weight: 300;
+				letter-spacing: 0;
+			}
+
+			/* we modify the links a little bit to make them suitable for footer */
+			
+			footer a img
+			{
+				padding: 0;
+				width: 1.6em;
+			}
+
+			footer a
+			{
+				margin-right: 1.1em;
+				margin-left: auto;
+			}
+
+			/*header a:focus,*/ footer a:hover
+			{
+				opacity: 0.8;
+			}
+
+			footer a:active
+			{
+				color: rgb(251, 255, 136);
+			}
+
+			/* ------ Body styles ------ */
+
+			body
+			{
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				font-size: 2.5vmin;
+			}
+
+			/* ------ Form Styles ------ */
+
+			form
+			{
+				width: 100%;
+				padding: .5em;
+			}
+
+			.required:after
+			{
+				content: "*";
+				color: rgb(218, 6, 6);
+            }
+			
+
+			/* ------ Main box styles ------ */
+
+			.main-box
+			{
+				max-width: 40em;
+				border-radius: 5px;
+				/* border: 1px solid; */
+				border: 3px outset;
+				background-color: rgb(232, 252, 180);
+				margin: 2em auto;
+				padding: 0em;
+			}
+
+			/* Make the list elements of outer list flexboxes */
+			
+			/* each such flexbox contains 1 label 1 input or fieldset */
+
+			.outer-list > li
+			{
+				/* border: solid; */
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;	/* if not done the flex items will be aligned from top; ugly */
+				margin: 2em 2em;	/* to space out things */
+			}
+
+			.outer-list > li > label
+			{
+				flex: 0 0 10em;
+				margin: .8em 0;
+				color: gray;
+			}
+
+			.outer-list > li > input, .outer-list > li > fieldset, .outer-list > li > select
+			{
+				width: 25em;	/*without it select won't get proper size*/
+				flex: 1 1 auto;
+				font: inherit;
+				padding: .5em;
+				margin: 0;
+				border: 2px gray inset;
+				border-radius: 5px;
+			}
+
+			/* ------ Button styles ------ */
+
+            #button
+			{
+                width: fit-content;
+                flex: 0 0 auto;
+				border: 2px gray outset;
+                margin: 0 auto;
+			}
+
+			#button:hover
+			{
+				background-color: lightgray;
+			}
+
+			#button:active
+			{
+				background-color: rgba(211, 211, 211, 0.523);
+				border: 2px gray inset;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<footer>
+
+			<img src="image/logo.png" alt="college-logo">
+
+			<p>Premium Institute of Education</p>
+
+			<a href = "index.html#q-links"><img src = "image/house.png"></a>
+
+		</footer>
+
+		<form>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li><label for = "name" class="required">Name</label><input id = "name" name = "name"></li>
+                    
+                    <li><label for = "UID" class="required">UID</label><input type = "number" min = "0" id = "UID" name = "UID"></li>
+
+                    <li><label for = "pssw" class="required">Password</label><input type = "password" id = "pssw" name = "pssw"></li>
+
+                    <li>
+                        <label for = "personal" class="required">Yourself</label>
+                        <select id = "personal">
+                            <option>Select</option>
+                            <option>Student</option>
+                            <option>Alumni</option>
+                            <option>Teacher</option>
+                            <option>Non-Teaching-Stuff</option>
+                        </select>
+                    </li>
+
+                    <li><input id = "button" type="submit" value="Log in"></li>
+
+				</ul>
+
+            </div>
+
+		</form>
+	</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Career Hub</title>
+        <style>
+
+            /* ------ general styles ------ */
+
+            @import url("common/general styles.css");
+
+            /* ------ Header Styles ------ */
+
+            @import url("common/header.css");
+
+            /* ------ Footer Style ------ */
+
+            @import url("common/footer.css");
+
+            /* ------ Course Style ------ */
+
+            @import url("common/Course styles.css");
+
+            main
+            {
+                background-color: antiquewhite;
+            }
+
+            main h3
+            {
+                text-decoration: solid;
+                line-height: 1.5em;
+            }
+
+            main h3::before
+            {
+                content: "Course@ ";
+            }
+
+            main p
+            {
+                text-align: justify;
+            }
+
+            #course h3
+            {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <header>
+            
+            <img src="image/logo.png" alt="college-logo">
+            
+            <div>
+                <h2>premium institute Of education</h2>
+
+                <nav>
+                    <ul>
+                        <li><a href="javascript:history.back()">Back</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="admission.html">Admissions</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+
+        <div>
+            <img src = "image/career.jpg" width="100%">
+        </div>
+
+        <main>
+            
+            <div id = "course">
+
+                <h1>Career Hub</h1>
+
+                <p class = "course-info">
+                    Career Hub offers several short-term courses aimed at providing students with an opportunity
+                    to embrace a culture of inclusive learning — “see-feel-learn-earn” — where they learn by
+                    example and excel through experience. Career Connect aims to provide students with necessary
+                    skills outside the classroom through interactive sessions with industry experts and hands-on
+                    training through industry visits so their transition from campus to workplace is seamless.
+                </p>
+
+                <h2>What We Offer</h2>
+
+                <h3 onclick="display(0)">Tally Prime Essential Level 3 (Advance)</h3>
+
+                <div id = "Tally-Prime-Essential-Level-3-(Advance)"></div>
+
+                <h3 onclick="display(1)">Public Speaking Workshop</h3>
+
+                <div id = "Public-Speaking-Workshop"></div>
+
+                <h3 onclick="display(2)">Certified Financial Planner</h3>
+
+                <div id = "Certified-Financial-Planner"></div>
+
+                <h3 onclick="display(3)">Dynamics Of Capital Market</h3>
+
+                <div id = "Dynamics-Of-Capital-Market"></div>
+
+                <h3 onclick="display(4)">Digital Marketing</h3>
+
+                <div id = "Digital-Marketing"></div>
+
+                <h3 onclick="display(5)">Cyber Security</h3>
+
+                <div id = "Cyber-Security"></div>
+
+                <script>
+                    var text = [];
+
+                    var id_list = ["Tally-Prime-Essential-Level-3-(Advance)", "Public-Speaking-Workshop", "Certified-Financial-Planner", "Dynamics-Of-Capital-Market", "Digital-Marketing", "Cyber-Security"];
+
+                    var check = [1, 1, 1, 1, 1, 1];
+
+                    // for Tally-Prime-Essential-Level-3-(Advance)
+
+                    text[0] = '<p class = "course-info">\
+                    The Tally Prime Essential Level 3 (Advance) add-on course is a specialized training program\
+                    designed to provide students with in-depth knowledge and advanced skills in using Tally Prime,\
+                    a popular accounting software widely used in businesses and organizations.\
+                    </p>\
+                    <p class="course-info">\
+                    This course is typically offered to individuals who have completed the\
+                    earlier levels of Tally Prime training or have a basic understanding of the software. It\
+                    aims to further enhance participants\' proficiency in utilizing the advanced features and\
+                    functionalities of Tally Prime for efficient accounting and financial management.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">12 Days</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 1500/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Program and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                    // for Public-Speaking-Workshop
+
+                    text[1] = '<p class = "course-info">\
+                    Public Speaking Workshop is a specialized training program designed to help individuals\
+                    improve their public speaking skills and become more effective and confident communicators.\
+                    These workshops typically cover various aspects of public speaking, including speech\
+                    preparation, delivery techniques, body language, voice modulation, and handling nerves or stage fright.\
+                    </p>\
+                    <p class="course-info">\
+                        The main objective of a Public Speaking Workshop is to provide participants with practical\
+                        tools and techniques that they can apply to deliver engaging and impactful speeches or\
+                        presentations. The workshops are often interactive and involve a combination of theory,\
+                        hands-on exercises, and opportunities for participants to practice their public speaking\
+                        skills in a supportive environment.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">15 Days</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 1000/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Program and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                    // for Certified-Financial-Planner
+
+                    text[2] = '<p class = "course-info">\
+                    The Certified Financial Planner<sup>CM</sup> Certification course is the most prestigious and\
+                    internationally accepted financial planning qualification. In an era of super-specialisation,\
+                    this certification equips career aspirants to provide comprehensive financial advisory services\
+                    and make a lucrative career in the financial services industry.\
+                    </p>\
+                    <p class="course-info">\
+                        CFP<sup>CM</sup> Certification awarded by the Financial Planning Standards Board Ltd India\
+                        (FPSB India) has been accredited by NISM under Regulation 7(2) of Securities and Exchange\
+                        Board of India (Investment Advisers) Regulations, 2013. It is the highest level of certification\
+                        worldwide in the field of financial planning with over 1,70,000 CFPCM Certificants. It\'s widely\
+                        respected by consumers, professionals and industry and presents opportunities worldwide with\
+                        recognition in 26 countries.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">1 year</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 15000/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Programme and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                    // for Dynamics-Of-Capital-Market
+
+                    text[3] = '<p class = "course-info">\
+                    This certificate course equips participants with various tools and techniques of investment\
+                    in the capital market. It introduces them to the basics of fundamental analysis, technical\
+                    analysis and derivatives. It helps them understand the process of company/industry analysis,\
+                    market dynamics affecting the company price movements, and opens up various opportunities for\
+                    wealth creation. Structured to cover both theoretical and practical inputs, the course, taught\
+                    by leading experts in the capital market, lays the foundation for and prepares students to\
+                    invest and trade, knowing the risk appetite and return expectation of an investor.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">3 months (twice a week)</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 4000/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Programme and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                    // for Digital-Marketing
+
+                    text[4] = '<p class = "course-info">\
+                    Digital marketing is a fast-growing avenue that opens up an exciting world to its practitioners,\
+                    especially as the digital frontiers expand. With an effective digital presence becoming imperative,\
+                    the opportunities that this field are throwing up are limitless. It helps the employers, advertisers\
+                    and companies interact with their target audience in real time. The course takes students through the\
+                    characteristics of different platforms to the skills necessary to give an adrenaline shot to their\
+                    career and business.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">3 months (thrice a week)</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 4000/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Programme and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                    // for cybersecurity
+
+                    text[5] = '<p class = "course-info">\
+                    The purpose of this training program is to provide individuals with necessary knowledge\
+                    and skills to protect their information assets. This class will immerse students in an\
+                    interactive environment where they will acquire a fundamental understanding of various\
+                    computer and network security threats such as identity theft, credit card fraud, online\
+                    banking phishing scams, virus and backdoors, email hoaxes, sex offenders lurking online,\
+                    loss of confidential information, hacking attacks and social engineering. More importantly,\
+                    the skills learned from the class will help students take the necessary steps to mitigate\
+                    their security exposure. This course creates greater value to students by providing them\
+                    a solid base from which to build their career in the corporate world.\
+                    </p>\
+                    <h4>Duration</h4>\
+                    <p class="course-info">3 months (twice a week)</p>\
+                    <h4>Fees</h4>\
+                    <p class="course-info">₹ 4000/- (inclusive of GST)</p>\
+                    <h4>Important Links</h4>\
+                    <p class="course-info"><a href="#">Course Programme and Syllabus</a></p>\
+                    <p class="course-info"><b><a href="#">Registration</a></b></p>';
+
+                </script>
+
+                <script src="common/collasp.js"></script>
+
+            </div>
+            
+            <div id = "course-requirements">
+                
+                <h4>Certificate After completion</h4>
+
+                <p class="additional-info"> Certificates will be given based on a dynamic evaluation process. </p>
+                    
+                <h4>Placement Assistance</h4>
+
+                <p class = "additional-info"> Assistance with placement will be provided upon successful completion of the course. </p>
+                
+                <h4>Attendance</h4>
+                
+                <p class = "additional-info"> Attendance is compulsory in order to receive a certificate. </p>
+                
+                <h4>Open To All</h4>
+                
+                <p class = "additional-info"> Career Connect courses are open to all students - PIE and External. </p>
+
+                <h4>Career Hub Registration</h4>
+
+                <p class="additional-info">For registration and more information contact-</p>
+
+                <p class="additional-info">Dean's office 2th-floor Email id: <a href="mailto:dean.office@PIE.edu.in">dean.office@PIE.edu.in</a> Contact no. 9744858960/ 033-40120749 (10am-4pm)</p>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+            <p>Copyright &copy; 2018 Premium Institute of Education</p>
+
+        </footer>
+    
+    </body>
+</html>

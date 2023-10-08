@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Come in</title>
+		<style>
+			/* ------ general styles ------ */
+
+			@import url("common/general styles.css");
+
+			/* ------ Footer style ------ */
+
+			@import url("common/footer.css");
+
+			/* Disable resizing in android devices */
+
+            :root
+			{
+                touch-action: pan-x pan-y;
+                height: 100%;
+            }
+
+			footer
+			{
+				padding: .1em;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				/* background-color: white; */
+			}
+
+			footer img
+			{
+				width: 4em;
+				padding: 1em;
+				/* opacity: .7; */
+			}
+
+			footer p
+			{
+				color: white;
+				text-align: left;
+				font-weight: 300;
+				letter-spacing: 0;
+			}
+
+			/* we modify the links a little bit to make them suitable for footer */
+			
+			footer a img
+			{
+				padding: 0;
+				width: 1.5em;
+			}
+
+			footer a
+			{
+				margin-right: 1.1em;
+				margin-left: auto;
+			}
+
+			/*header a:focus,*/ footer a:hover
+			{
+				opacity: 0.8;
+			}
+
+			footer a:active
+			{
+				color: rgb(251, 255, 136);
+			}
+
+			/* ------ Body styles ------ */
+
+			body
+			{
+				font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				font-size: 2.5vmin;
+			}
+
+			/* ------ Form Styles ------ */
+
+			form
+			{
+				width: 100%;
+				padding: .5em;
+				display: flex;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+			}
+
+			.required:after
+			{
+				content: "*";
+				color: rgb(218, 6, 6);
+			}
+
+			/* This is to serve as heading for parts of the form */
+
+			form > p
+			{
+				width: 100%;
+				border-radius: 5px;
+				border: 2px outset;
+				background-color: rgb(252, 240, 180);
+				/* background-color: rgb(232, 252, 180); */
+				color: rgb(84, 73, 232);
+				margin: .3em;
+				padding: .5em;
+			}
+
+			/* ------ Main box styles ------ */
+
+			/* Here I plane to make a main box class and use it to
+			design all the modules of the form */
+
+			.main-box
+			{
+				flex: 1 1 37em;
+				border-radius: 5px;
+				/* border: 1px solid; */
+				border: 2px outset;
+				background-color: rgb(252, 240, 180);
+				/* background-color: rgb(232, 252, 180); */
+				margin: .3em;
+				padding: 0em;
+			}
+
+			/* Make the list elements of outer list flexboxes */
+			
+			/* each such flexbox contains 1 label 1 input or fieldset */
+
+			.outer-list > li
+			{
+				/* border: solid; */
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;	/* if not done the flex items will be aligned from top; ugly */
+				margin: 2em 2em;	/* to space out things */
+			}
+
+			.outer-list > li > label
+			{
+				flex: 0 0 10em;
+				margin: .8em 0;
+				color: gray;
+			}
+
+			.outer-list > li > input, .outer-list > li > textarea, .outer-list > li > select
+			{
+				width: 25em;	/*without it select won't get proper size*/
+				flex: 1 1 auto;
+				font: inherit;
+				padding: .5em;
+				margin: 0;
+				border: 2px gray inset;
+				border-radius: 5px;
+			}
+
+			.outer-list > li > textarea
+			{
+				height: 7.5em;
+				resize: none;
+			}
+
+			/* Submit Button styles */
+
+			.outer-list > li > input[type = "submit"]
+			{
+				border: 2px gray outset;
+			}
+
+			.outer-list > li > input[type = "submit"]:hover
+			{
+				background-color: lightgray;
+			}
+
+			.outer-list > li > input[type = "submit"]:active
+			{
+				background-color: rgba(211, 211, 211, 0.523);
+				border: 2px gray inset;
+			}
+
+			/* ------ Marks box style ------ */
+
+			/* For marks input modules I modify the main box module a little bit */
+
+			.marks-box
+			{
+				width: 10em;
+				flex: 1 1 auto;
+				/* border: 1px solid; */
+			}
+
+			.marks-box > .outer-list > li > input, .marks-box > .outer-list > li > fieldset, .marks-box > .outer-list > li > select
+			{
+				width: 5em;	/*without it select won't get proper size*/
+				flex: 1 1 auto;
+				/* border: 1px solid gray; */
+			}
+
+			.marks-box > .outer-list > li
+			{
+				margin: .8em 1em;	/* to space out things */
+			}
+
+			.marks-box > .outer-list > li > .sub-name
+			{
+				color: brown;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<footer>
+
+			<img src="image/logo.png" alt="college-logo">
+
+			<p>Premium Institute of Education</p>
+
+			<a href = "admission.html"><img src = "image/Close.png"></a>
+
+		</footer>
+
+		<!-- <div id = "disclaimer"> </div> -->
+
+		<form>
+
+			<p>Step 1 / 4 General Information</p>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li><label for = "name-f" class="required">First Name</label><input id = "name-f" name = "name-f"></li>
+
+					<li><label for = "name-m">Middle Name</label><input id = "name-m" name = "name-m"></li>
+
+					<li><label for = "name-l" class="required">Last Name</label><input id = "name-l" name = "name-l"></li>
+
+					<li><label for = "email">Email</label><input type = "email" id = "email" name = "email"></li>
+
+					<li><label for = "dob" class="required">Date of Birth</label><input type = "date" id = "dob" name = "dob"></li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "catagory" class="required">Catagory</label>
+						
+						<select id= "catagory" name = "catagory">
+
+							<option>Select</option>
+						
+							<option>General</option>
+							
+							<option>SC</option>
+							
+							<option>ST</option>
+							
+							<option>OBC-A</option>
+
+							<option>OBC-B</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+						
+						<label for = "gender" class="required">Gender</label>
+						
+						<select id= "gender" name = "gender">
+
+							<option>Select</option>
+						
+							<option>Male</option>
+							
+							<option>Female</option>
+							
+							<option>None</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "mobile" class = "required">Mobile Number</label><input type="tel" id= "mobile" name = "mobile"></li>
+
+					<li>
+						
+						<label for = "address">Your Address</label>
+						
+						<textarea name="address" id="address" placeholder = "No more than 400 characters long" maxlength="400"></textarea>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<p>Step 2 / 4 - I Academic Details</p>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "board-result-state" class="required">Board Result State</label>
+						
+						<select id= "board-result-state" name = "board-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail</option>
+							
+							<option>Compartmental</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+						
+						<label for = "board" class="required">Board</label>
+						
+						<select id= "board" name = "board">
+
+							<option>Select</option>
+							<option>Council for the Indian School Certificate Examination (ISC)</option>
+							<option>Central Board of Secondary Education (CBSE)</option>
+							<option>West Bengal Council of Higher Secondary Education (WBCHSE)</option>
+							<option>National Institute of Open Schooling (NIOS)</option>
+							<option>Assam Higher Secondary Education Council</option>
+							<option>Banasthali Vidyapith</option>
+							<option>Bhutan Council for School Examination and assessment</option>
+							<option>Bihar Intermediate Education Council</option>
+							<option>Bihar School Examination Board</option>
+							<option>Board of Intermediate and Secondary Education, Barisal Bangladesh</option>
+							<option>Board of Intermediate and Secondary Education, Jessore Bangladesh</option>
+							<option>Board Of Intermediate Education Andhra Pradesh</option>
+							<option>Board of Secondary Education, Madhya Pradesh, Bhopal</option>
+							<option>Board of Secondary Education, Rajasthan</option>
+							<option>Chhattisgarh Board of Secondary Education</option>
+							<option>Council Of Higher Secondary Education Manipur</option>
+							<option>Council Of Higher Secondary Education, Odisha</option>
+							<option>Goa Board of Secondary and Higher Secondary Education</option>
+							<option>Government Of Karnataka Dept. Of Pre-University Education</option>
+							<option>Gujarat Secondary and Higher Secondary Education Board</option>
+							<option>Haryana Board Of School Education</option>
+							<option>Government of Nepal National Examinations Board</option>
+							<option>Himachal Pradesh Board of School Education</option>
+							<option>IGCSE Programme From University Of Cambridge (International Exam)</option>
+							<option>International Baccalaureate</option>
+							<option>Jammu and kashmir Board of School Education</option>
+							<option>Jharkhand Academic Council, Ranchi</option>
+							<option>Karnataka Secondary Education Examination Board</option>
+							<option>Kerala Board Of Higher Secondary Education</option>
+							<option>Kerala Board of Public Examination</option>
+							<option>M.P. State Open School</option>
+							<option>Maharashtra State Board of Secondary and Higher Secondary Education</option>
+							<option>Meghalaya Board of School Education</option>
+							<option>Mizoram Board of School Education</option>
+							<option>Nagaland Board of School Education</option>
+							<option>Punjab School Education Board</option>
+							<option>Rabindra Mukta Vidyalaya, West Bengal</option>
+							<option>Tamil Nadu State Board of School Examination</option>
+							<option>Tamilnadu Board Of Higher Secondary Education</option>
+							<option>Telangana Sate Board of Intermediate Education</option>
+							<option>Tripura Board of Secondary Education</option>
+							<option>Uttar Pradesh Board of High School and Intermediate Education</option>
+							<option>Uttaranchal Shiksha Evm Pariksha Parishad (NEE: Board of School Education Uttarakhand)</option>
+							<option>West Bengal Board of Madrasah Education</option>
+							<option>West Bengal State Council Of Vocational Education And Training</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "board-roll" class = "required">Board Roll Number</label><input type="number" min = "0" id= "board-roll" name = "board-roll"></li>
+
+					<li><label for = "registration-no" class = "required">Board Registration Number</label><input type="number" min = "0" id= "registration-no" name = "registration-no"></li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li><label for = "school-name">Institute Name</label><input id = "school-name" name = "school-namef"></li>
+
+					<li>
+						
+						<label for = "medium">Medium</label>
+						
+						<select id= "medium" name = "medium">
+						
+							<option>Select</option>
+
+							<option>English</option>
+							
+							<option>Bengali</option>
+
+							<option>Hindi</option>
+
+							<option>Others</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+						
+						<label for = "passing-year" class="required">Year of Passing</label>
+						
+						<select id= "passing-year" name = "passing-year">
+						
+							<option>Select</option>
+
+							<option>2018</option>
+							
+							<option>2017</option>
+
+							<option>2016</option>
+
+							<option>2015</option>
+
+							<option>2014</option>
+
+							<option>2013</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<p>Step 2 / 4 - II Marks Obtained in Higher Secondary or Equivalent Exam</p>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-1" class="required sub-name">Subject 1</label>
+						
+						<select id= "sub-1" name = "sub-1">
+						
+							<option>Select</option>
+
+							<option>Alternative English</option>
+							<option>Bengali</option>
+							<option>English</option>
+							<option>Hindi</option>
+							<option>Nepali</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-1-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-1-fm" name = "sub-1-fm"></li>
+
+					<li><label for = "sub-1-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-1-mo" name = "sub-1-mo"></li>
+
+					<li>
+						
+						<label for = "sub-1-result-state" class="required">Result State</label>
+						
+						<select id= "sub-1-result-state" name = "sub-1-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-2" class="required sub-name">Subject 2</label>
+						
+						<select id= "sub-2" name = "sub-2">
+						
+							<option>Select</option>
+
+							<option>Bengali</option>
+							<option>English</option>
+							<option>Gujrati</option>
+							<option>Hindi</option>
+							<option>Nepali</option>
+							<option>Odia</option>
+							<option>Punjabi</option>
+							<option>Santhali</option>
+							<option>Telegu</option>
+							<option>Urdu</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-2-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-2-fm" name = "sub-2-fm"></li>
+
+					<li><label for = "sub-2-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-2-mo" name = "sub-2-mo"></li>
+
+					<li>
+						
+						<label for = "sub-2-result-state" class="required">Result State</label>
+						
+						<select id= "sub-2-result-state" name = "sub-2-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-3" class="required sub-name">Subject 3</label>
+						
+						<select id= "sub-3" name = "sub-3">
+						
+							<option>Select</option>
+
+							<option>Accountancy</option>
+							<option>Agronomy</option>
+							<option>Anthropology</option>
+							<option>Arabic</option>
+							<option>Biological-Science</option>
+							<option>Business Studies</option>
+							<option>Chemistry</option>
+							<option>Commercial Law</option>
+							<option>Computer Application</option>
+							<option>Computer Science</option>
+							<option>Costing and Taxation</option>
+							<option>Economics</option>
+							<option>Education</option>
+							<option>Environment Studies</option>
+							<option>Family Resource Management</option>
+							<option>Geography</option>
+							<option>Health & Physical Education</option>
+							<option>History</option>
+							<option>Home Management</option>
+							<option>Journalism & Mass Communication</option>
+							<option>Mathematics</option>
+							<option>Music</option>
+							<option>Nutrition</option>
+							<option>Performing Arts</option>
+							<option>Persian</option>
+							<option>Philosophy</option>
+							<option>Physics</option>
+							<option>Political Science</option>
+							<option>Preliminaries of Auditing</option>
+							<option>Psychology</option>
+							<option>Sanskrit</option>
+							<option>Sociology</option>
+							<option>Statistics</option>
+							<option>Visual Arts</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-3-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-3-fm" name = "sub-3-fm"></li>
+
+					<li><label for = "sub-3-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-3-mo" name = "sub-3-mo"></li>
+
+					<li>
+						
+						<label for = "sub-3-result-state" class="required">Result State</label>
+						
+						<select id= "sub-3-result-state" name = "sub-3-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-4" class="required sub-name">Subject 4</label>
+						
+						<select id= "sub-4" name = "sub-4">
+						
+							<option>Select</option>
+
+							<option>Accountancy</option>
+							<option>Agronomy</option>
+							<option>Anthropology</option>
+							<option>Arabic</option>
+							<option>Biological-Science</option>
+							<option>Business Studies</option>
+							<option>Chemistry</option>
+							<option>Commercial Law</option>
+							<option>Computer Application</option>
+							<option>Computer Science</option>
+							<option>Costing and Taxation</option>
+							<option>Economics</option>
+							<option>Education</option>
+							<option>Environment Studies</option>
+							<option>Family Resource Management</option>
+							<option>Geography</option>
+							<option>Health & Physical Education</option>
+							<option>History</option>
+							<option>Home Management</option>
+							<option>Journalism & Mass Communication</option>
+							<option>Mathematics</option>
+							<option>Music</option>
+							<option>Nutrition</option>
+							<option>Performing Arts</option>
+							<option>Persian</option>
+							<option>Philosophy</option>
+							<option>Physics</option>
+							<option>Political Science</option>
+							<option>Preliminaries of Auditing</option>
+							<option>Psychology</option>
+							<option>Sanskrit</option>
+							<option>Sociology</option>
+							<option>Statistics</option>
+							<option>Visual Arts</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-4-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-4-fm" name = "sub-4-fm"></li>
+
+					<li><label for = "sub-4-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-4-mo" name = "sub-4-mo"></li>
+
+					<li>
+						
+						<label for = "sub-4-result-state" class="required">Result State</label>
+						
+						<select id= "sub-4-result-state" name = "sub-4-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-5" class="required sub-name">Subject 5</label>
+						
+						<select id= "sub-5" name = "sub-5">
+						
+							<option>Select</option>
+
+							<option>Accountancy</option>
+							<option>Agronomy</option>
+							<option>Anthropology</option>
+							<option>Arabic</option>
+							<option>Biological-Science</option>
+							<option>Business Studies</option>
+							<option>Chemistry</option>
+							<option>Commercial Law</option>
+							<option>Computer Application</option>
+							<option>Computer Science</option>
+							<option>Costing and Taxation</option>
+							<option>Economics</option>
+							<option>Education</option>
+							<option>Environment Studies</option>
+							<option>Family Resource Management</option>
+							<option>Geography</option>
+							<option>Health & Physical Education</option>
+							<option>History</option>
+							<option>Home Management</option>
+							<option>Journalism & Mass Communication</option>
+							<option>Mathematics</option>
+							<option>Music</option>
+							<option>Nutrition</option>
+							<option>Performing Arts</option>
+							<option>Persian</option>
+							<option>Philosophy</option>
+							<option>Physics</option>
+							<option>Political Science</option>
+							<option>Preliminaries of Auditing</option>
+							<option>Psychology</option>
+							<option>Sanskrit</option>
+							<option>Sociology</option>
+							<option>Statistics</option>
+							<option>Visual Arts</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-5-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-5-fm" name = "sub-5-fm"></li>
+
+					<li><label for = "sub-5-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-5-mo" name = "sub-5-mo"></li>
+
+					<li>
+						
+						<label for = "sub-5-result-state" class="required">Result State</label>
+						
+						<select id= "sub-5-result-state" name = "sub-5-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box marks-box">
+
+				<ul class = "outer-list">
+
+					<li>
+						
+						<label for = "sub-6" class="required sub-name">Subject 6</label>
+						
+						<select id= "sub-6" name = "sub-6">
+						
+							<option>Select</option>
+
+							<option>Accountancy</option>
+							<option>Agronomy</option>
+							<option>Anthropology</option>
+							<option>Arabic</option>
+							<option>Biological-Science</option>
+							<option>Business Studies</option>
+							<option>Chemistry</option>
+							<option>Commercial Law</option>
+							<option>Computer Application</option>
+							<option>Computer Science</option>
+							<option>Costing and Taxation</option>
+							<option>Economics</option>
+							<option>Education</option>
+							<option>Environment Studies</option>
+							<option>Family Resource Management</option>
+							<option>Geography</option>
+							<option>Health & Physical Education</option>
+							<option>History</option>
+							<option>Home Management</option>
+							<option>Journalism & Mass Communication</option>
+							<option>Mathematics</option>
+							<option>Music</option>
+							<option>Nutrition</option>
+							<option>Performing Arts</option>
+							<option>Persian</option>
+							<option>Philosophy</option>
+							<option>Physics</option>
+							<option>Political Science</option>
+							<option>Preliminaries of Auditing</option>
+							<option>Psychology</option>
+							<option>Sanskrit</option>
+							<option>Sociology</option>
+							<option>Statistics</option>
+							<option>Visual Arts</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "sub-6-fm" class="required">Full Marks</label><input type="number" min = "0" id = "sub-6-fm" name = "sub-6-fm"></li>
+
+					<li><label for = "sub-6-mo" class="required">Marks Obtained</label><input type="number" min = "0" id = "sub-6-mo" name = "sub-6-mo"></li>
+
+					<li>
+						
+						<label for = "sub-6-result-state" class="required">Result State</label>
+						
+						<select id= "sub-6-result-state" name = "sub-6-result-state">
+
+							<option>Select</option>
+						
+							<option>Pass</option>
+							
+							<option>Fail in Theory</option>
+
+							<option>Fail in Practical</option>
+
+							<option>Fail</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<p>Step 3 / 4 Course Application</p>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li>
+							
+						<label for = "course" class="required">Select Course</label>
+						
+						<select id= "course" name = "course">
+
+							<option>Select</option>
+
+							<optgroup label="B.Sc. (Hons)">
+						
+								<option> Electronics B.Sc. (Hons)</option>
+
+								<option> Computer Science B.Sc. (Hons)</option>
+
+								<option> Economics B.Sc. (Hons)</option>
+
+								<option> Mathematics B.Sc. (Hons)</option>
+
+								<option> Chemistry B.Sc. (Hons)</option>
+
+								<option> Physics B.Sc. (Hons)</option>
+
+							</optgroup>
+
+							<optgroup label="B.A. (Hons)">
+
+								<option> Bengali B.A. (Hons) </option>
+
+								<option> English B.A. (Hons) </option>
+
+								<option> History B.A. (Hons) </option>
+
+								<option> Political Science B.A. (Hons) </option>
+
+								<option> Sociology B.A. (Hons) </option>
+
+							</optgroup>
+
+							<optgroup label="B.Com.">
+							
+								<option>B.Com. (Hons)</option>
+
+							</optgroup>
+
+							<optgroup label="B.B.A.">
+
+								<option>B.B.A. (Hons)</option>
+
+							</optgroup>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li>
+							
+						<label for = "apply-under" class="required">Apply Under</label>
+						
+						<select id= "apply-under" name = "apply-under">
+
+							<option>Select</option>
+						
+							<option>NCC Catagory</option>
+							
+							<option>Sports Catagory</option>
+
+							<option>General Catagory</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<p>Step 4 / 4 Additional Information</p>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li><label for = "A-mobile" class = "required">Alternate Mobile Number</label><input type="tel" id= "A-mobile" name = "A-mobile"></li>
+
+					<li>
+							
+						<label for = "blood-group" class="required">Blood Group</label>
+						
+						<select id= "blood-group" name = "blood-group">
+
+							<option>Select</option>
+						
+							<option>A-</option>
+							
+							<option>A+</option>
+
+							<option>B-</option>
+							
+							<option>B+</option>
+
+							<option>AB-</option>
+							
+							<option>AB+</option>
+
+							<option>O-</option>
+							
+							<option>O+</option>
+
+							<option>Not Known</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+							
+						<label for = "nationality" class="required">Nationality</label>
+						
+						<select id= "nationality" name = "nationality">
+
+							<option>Select</option>
+						
+							<option>Scratlantic</option>
+							
+							<option>Lunatic</option>
+
+							<option>Intergallactic</option>
+
+							<option>Other</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+							
+						<label for = "religion">Religion</label>
+						
+						<select id= "religion" name = "religion">
+
+							<option>Select</option>
+						
+							<option>Hinduism</option>
+							
+							<option>Jainism</option>
+
+							<option>Sikhism</option>
+
+							<option>Islam</option>
+
+							<option>Christianity</option>
+
+							<option>Buddhism</option>
+
+							<option>Others</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+							
+						<label for = "physically-challenged" class="required">Physically Challenged</label>
+						
+						<select id= "physically-challenged" name = "physically-challenged">
+
+							<option>Select</option>
+						
+							<option>Yes</option>
+							
+							<option>No</option>
+
+						</select>
+						
+					</li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li>
+							
+						<label for = "physical-challenge-type" class="required">Type of Physical Challenge</label>
+						
+						<select id= "physical-challenge-type" name = "physical-challenge-type">
+
+							<option>Select</option>
+						
+							<option>Visually Handicapped</option>
+							
+							<option>Hearing Impairment</option>
+
+							<option>Orthopaedically Handicapped</option>
+
+							<option>None</option>
+
+						</select>
+						
+					</li>
+
+					<li>
+							
+						<label for = "single-parent" class="required">Single Parent</label>
+						
+						<select id= "single-parent" name = "single-parent">
+
+							<option>Select</option>
+						
+							<option>Yes</option>
+							
+							<option>No</option>
+
+						</select>
+						
+					</li>
+
+					<li><label for = "father-name" class="required">Father Name</label><input id = "father-name" name = "father-name"></li>
+
+					<li><label for = "mother-name" class="required">Mother Name</label><input id = "mother-name" name = "mother-name"></li>
+
+					<li><label for = "annual-family-income" class="required">Annual Family Income</label><input type="number" min = "0" id = "annual-family-income" name = "annual-family-income"></li>
+
+				</ul>
+			
+			</div>
+
+			<div class = "main-box">
+
+				<ul class = "outer-list">
+
+					<li><input type="submit"></li>
+					
+				</ul>
+				
+			</div>
+
+		</form>
+	</body>
+</html>

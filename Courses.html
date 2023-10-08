@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Courses</title>
+        <style>
+
+            /* ------ general styles ------ */
+
+            @import url("common/general styles.css");
+
+            /* ------ Header Styles ------ */
+
+            @import url("common/header.css");
+
+            /* ------ Footer Style ------ */
+
+            @import url("common/footer.css");
+
+            /* ------ Course List Style ------ */
+
+            main
+            {
+                background-color: azure;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                margin: 0;
+                padding: .5em;
+            }
+            
+            fieldset
+            {
+                padding: 2em;
+                margin: 1em;
+                border-radius: 20px;
+                border: 1px solid;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            legend
+            {
+                margin: 0;
+                padding: .3em;
+                cursor: pointer;
+                /* each legend here is a hyper link so modifying the cursor */
+            }
+
+            #science
+            {
+                color: rgba(179, 0, 255);
+            }
+
+            #art
+            {
+                color: green;
+            }
+
+            #com
+            {
+                color: rgb(255, 128, 0);
+            }
+
+            #bba
+            {
+                color: teal;
+            }
+
+            #science a
+            {
+                background-color: rgba(179, 0, 255, 0.8);
+            }
+
+            #art a
+            {
+                background-color: rgba(0, 128, 0, 0.8);
+            }
+
+            #com a
+            {
+                background-color: rgba(255, 128, 0, 0.8);
+            }
+
+            #bba a
+            {
+                background-color: rgba(0, 128, 128, 0.8);
+            }
+
+            main a
+            {
+                display: block;
+                text-decoration: none;
+                flex: 0 1 10em;
+                height: 10em;
+                border-radius: inherit;
+                color: white;
+                margin: 1em;
+            }
+
+            main a > h4
+            {
+                font-family: inherit;
+                font-weight: 100;
+                margin: 1.5em;
+            }
+
+            main a:hover
+            {
+                border: 3px inset;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+
+        <header>
+            
+            <img src="image/logo.png" alt="college-logo">
+            
+            <div>
+                <h2>premium institute Of education</h2>
+
+                <nav>
+                    <ul>
+                        <li><a href="javascript:history.back()">Back</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="admission.html">Admissions</a></li>
+                        <li><a href="contact us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+
+        <main>
+            
+            <fieldset id = "science">
+                <legend onclick="window.location='Science.html'">
+                    B.Sc (Hons)
+                </legend>
+
+                <a href="computer science.html">
+                    <h4>Computer Science</h4>
+                </a>
+
+                <a href="Electronics.html">
+                    <h4>Electronics</h4>
+                </a>
+
+                <a href="Economics.html">
+                    <h4>Economics</h4>
+                </a>
+
+                <a href="Mathematics.html">
+                    <h4>Mathematics</h4>
+                </a>
+
+                <a href="Physics.html">
+                    <h4>Physics</h4>
+                </a>
+
+                <a href="Chemistry.html">
+                    <h4>Chemistry</h4>
+                </a>
+            </fieldset>
+
+            <fieldset id = "art">
+                <legend onclick="window.location='Arts.html'">
+                    B.A (Hons)
+                </legend>
+                <a href="Bengali.html">
+                    <h4>Bengali</h4>
+                </a>
+
+                <a href="History.html">
+                    <h4>History</h4>
+                </a>
+
+                <a href="Pol_Sci.html">
+                    <h4>Political Science</h4>
+                </a>
+
+                <a href="Sociology.html">
+                    <h4>Sociology</h4>
+                </a>
+
+                <a href="English.html">
+                    <h4>English</h4>
+                </a>
+            </fieldset>
+
+            <fieldset id = "bba">
+                <legend onclick="window.location='business.html'">
+                    B.B.A (Hons)
+                </legend>
+
+                <a href="BBA.html">
+                    <h4>Business Administra-<br>tion</h4>
+                </a>
+            </fieldset>
+
+            <fieldset id = "com">
+                <legend onclick="window.location='commerce.html'">
+                    B.Com (Hons)
+                </legend>
+
+                <a href="BCOM.html">
+                    <h4>B.com</h4>
+                </a>
+            </fieldset>
+
+        </main>
+
+        <footer>
+
+            <p>Copyright &copy; 2018 Premium Institute of Education</p>
+
+        </footer>
+    
+    </body>
+</html>
