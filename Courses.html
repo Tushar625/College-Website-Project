@@ -46,8 +46,12 @@
                 padding: .3em;
                 cursor: pointer;
                 /* each legend here is a hyper link so modifying the cursor */
-				max-width: 100%;
             }
+
+			legend > p
+			{
+				width: fit-content;
+			}
 
             #science
             {
@@ -140,7 +144,7 @@
             
             <fieldset id = "science">
                 <legend onclick="window.location='Science.html'">
-				<span>B.Sc (Hons)</span>
+				<p>B.Sc (Hons)</p>
                 </legend>
 
                 <a href="computer science.html">
@@ -170,7 +174,7 @@
 
             <fieldset id = "art">
                 <legend onclick="window.location='Arts.html'">
-				<span>B.A (Hons)</span>
+				<p>B.A (Hons)</p>
                 </legend>
                 <a href="Bengali.html">
                     <h4>Bengali</h4>
@@ -195,7 +199,7 @@
 
             <fieldset id = "bba">
                 <legend onclick="window.location='business.html'">
-                    <span>B.B.A (Hons)</span>
+                    <p>B.B.A (Hons)</p>
                 </legend>
 
                 <a href="BBA.html">
@@ -205,7 +209,7 @@
 
             <fieldset id = "com">
                 <legend onclick="window.location='commerce.html'">
-                    <span>B.Com (Hons)</span>
+                    <p>B.Com (Hons)</p>
                 </legend>
 
                 <a href="BCOM.html">
