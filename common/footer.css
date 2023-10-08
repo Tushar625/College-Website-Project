@@ -1,0 +1,10 @@
+footer
+{
+    background-color: rgb(7, 65, 7);
+    color: white;
+    text-align: center;
+    padding: .2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .8em;
+    letter-spacing: 2px;
+}

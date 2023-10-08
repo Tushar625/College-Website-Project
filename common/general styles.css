@@ -1,0 +1,64 @@
+
+@font-face {
+    font-family: Snell;
+    src: url("../snell-roundhand/SnellBT-Bold.otf");
+}
+
+@font-face {
+    font-family: Georgia;
+    src: url("../georgia/Georgia Regular font.ttf");
+}
+
+@font-face {
+    font-family: Verdana;
+    src: url("../verdana/verdana.ttf");
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url("../segoe_ui/Segoe UI.ttf");
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url("../Ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: url("../Times New Roman/times new roman.ttf");
+}
+
+html
+{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before
+{
+    box-sizing: inherit;
+    text-size-adjust: 150%; /* To prevent font resizing in android */
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body
+{
+    font-size: 2.85vmin;
+    padding: 0;
+}
+
+main
+{
+    min-height: 100vh;
+}
+
+a
+{
+    text-decoration: none;
+}

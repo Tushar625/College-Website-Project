@@ -1,0 +1,86 @@
+header
+{
+    color: rgb(7, 65, 7);
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+/* img and div are two flex items of header flex box */
+
+header img
+{
+    /* keep the logo fixed sized irrespective of the viewport size */
+    width: 100px;
+    height: 100px;
+    flex: 0 0 auto;
+}
+
+header div
+{
+    /* border: white solid; */
+    margin: 10px;
+    padding: .3em;
+    flex: 1 1 auto;
+}
+
+/* div has h2 and ul */
+
+header div h2
+{
+    /* border: solid; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    letter-spacing: .5em;
+    text-align: center;
+    margin-top: 0;
+    padding-left: .5em;
+    text-transform: uppercase;
+}
+
+/* ul is flex box so that list items are shown horizontally */
+
+header div ul
+{
+    /* border: white solid; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: solid; */
+    background-color: rgba(163, 205, 163, 0.559);
+    border-radius: 10px;
+}
+
+/* the list items are flex items are of fixed constant size */
+
+header div ul li
+{
+    flex: 0 0 10em;
+    text-align: center;
+    margin: .37em;
+    /* border: solid; */
+}
+
+/* we modify the links a little bit to make them suitable for headers */
+
+header a
+{
+    color: rgb(37, 94, 19);
+    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: .7em;
+    letter-spacing: 2px;
+}
+
+/*header a:focus,*/ header a:hover
+{
+    color: rgb(116, 172, 18);
+}
+
+header a:active
+{
+    color: rgb(251, 255, 136);
+}

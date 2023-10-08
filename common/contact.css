@@ -1,0 +1,124 @@
+/* Disable resizing in android devices */
+
+:root{
+    touch-action: pan-x pan-y;
+    height: 100%;
+}
+
+/* ------ Main Style ------ */
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(209, 228, 203);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* styling the form */
+
+main > form
+{
+    margin-left: auto;
+    margin-right: auto;
+    flex: 0 1 40em;
+    padding: 3em;
+}
+
+main h4
+{
+    color: green;
+}
+
+main h4, main h5
+{
+    font-family: inherit;
+    font-weight: 100;
+    margin: 0;
+    /* the space on top of the form heading is kept by form padding */
+    margin-bottom: 3em;
+}
+
+/* Properties common to both of them */
+
+input, textarea
+{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+    font-size: .7em;
+    /* margin on top of the first input element becomes 3em because
+    of the bottom margin of h4 */
+    margin-top: 2.5em;
+    border-radius: 5px;
+    border: none;
+}
+
+/* text box gets a certain height */
+
+textarea
+{
+    height: 20em;
+}
+
+/* styling the buttons */
+
+input[type = "submit"]
+{
+    width: fit-content;
+    padding: .5em 1em;
+    background-color: rgba(232, 163, 103, 0.829);
+    font-family: Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: .75em;
+    border: 1px dashed;
+    letter-spacing: 5px;
+}
+
+input[type = "submit"]:hover
+{
+    background-color: rgba(232, 163, 103);
+}
+
+input[type = "submit"]:active
+{
+    border: 1px solid;
+}
+
+/* styling the contact flex box */
+
+main > #contact
+{
+    flex: 1 1 auto;
+    padding: 3em;
+    /* we need to set the top and bottom margins of h4 as 1.5 em
+    so to maintain proper spacing on the top heading of contact
+    box we make its top margin 1.5em */
+    padding-top: 1.5em;
+}
+
+#contact h4, #contact h5
+{
+    margin: 1.5em 0;
+}
+
+#contact h5
+{
+    font-weight: bold;
+}
+
+a.contact-info
+{
+    color:rgb(126, 94, 66);
+}
+
+.contact-info
+{
+    /* along with p tags some a tags also added to this class so we
+    make everyone block element */
+    display: block;
+    /* remove the underlines of the hyper-links */
+    text-decoration: none;
+    color: rgb(93, 93, 93);
+    font-size: .75em;
+}

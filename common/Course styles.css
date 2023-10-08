@@ -1,0 +1,164 @@
+
+/* ------ Main Style ------ */
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ----- styling the form ----- */
+
+main > #course
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: inherit;
+    flex: 0 1 61em;
+    padding: 2em 4em;
+    color: rgb(98, 95, 95);
+    font-size: .82em;
+    line-height: 1.5em;
+    /* border: solid; */
+}
+
+main h4, main h2, main h1, main h3, main h5
+{
+    color: green;
+}
+
+main h4, main h5, main h2, main h1, main h3
+{
+    font-family: inherit;
+    font-weight: 100;
+    margin: 1.4em 0;
+    line-height: 1.5em;
+}
+
+#course em
+{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    color: teal;
+    font-style: normal;
+}
+
+.course-info
+{
+    /* along with p tags some a tags also added to this class so we
+    make everyone block element */
+    display: block;
+    /* remove the underlines of the hyper-links */
+    text-decoration: none;
+    margin-left: .3em;
+}
+
+main a
+{
+    color: olive;
+    /* text-decoration: underline; */
+}
+
+a.course-info
+{
+    color: rgb(126, 94, 66);
+}
+
+/* ----- styling the course-requirements flex item ----- */
+
+main > #course-requirements
+{
+    flex: 1 1 15em;
+    padding: 3em;
+    /* we need to set the top and bottom margins of h4 as 1.5 em
+    so to maintain proper spacing on the top heading of contact
+    box we make its top margin 1.5em */
+    padding-top: 1.5em;
+    background-color: beige;
+}
+
+#course-requirements h4, #course-requirements h5
+{
+    margin: 1.5em 0;
+}
+
+#course-requirements h5
+{
+    font-weight: bold;
+}
+
+.additional-info
+{
+    /* along with p tags some a tags also added to this class so we
+    make everyone block element */
+    display: block;
+    /* remove the underlines of the hyper-links */
+    text-decoration: none;
+    color: rgb(93, 93, 93);
+    font-size: .75em;
+}
+
+.indent
+{
+    text-indent: 2rem;
+}
+
+/* to insert an image in the webpage use this flex box */
+
+.spc-img
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em 0;
+}
+
+/* Used in academics to navigate between department
+works with spc-img flex box */
+
+.dep-nav
+{
+    justify-content: space-evenly;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: .5em;
+}
+
+/* make the name of current department bolder */
+
+#current-dep
+{
+    font-weight: bolder;
+}
+
+/* the image inside the flex box */
+
+.spc-img img
+{
+    width: 25em;
+    margin: .1em;
+}
+
+/* profile of a person, used for faculty in academics */
+
+.person
+{
+    display: flex;
+    width: 27em;
+    margin: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* name of each department in faculty */
+
+.dep
+{
+    color: green;
+    line-height: 1.5em;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}

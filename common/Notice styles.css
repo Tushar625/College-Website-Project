@@ -1,0 +1,72 @@
+main
+{
+    background-color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+main div
+{
+    max-width: 40em;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+main h4, main h2, main h3
+{
+    color: green;
+}
+
+main h4, main h5, main h2, main h3
+{
+    font-family: inherit;
+    font-weight: 100;
+    margin: 1.5em 0;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+main p
+{
+    font-size: .8em;
+    text-align: justify;
+    margin: 2.2em 0;
+}
+
+.imp
+{
+    color: red;
+    font-weight: bold;
+}
+
+ol p, ul p
+{
+    display: list-item;
+}
+
+main ul
+{
+    margin-left: 2em;
+    list-style-type: disc;
+}
+
+.link
+{
+    text-align: center;
+    font-size: larger;
+}
+
+/* main a
+{
+    color: olive;
+}
+
+/*main a:focus,/ main a:hover
+{
+    color: rgb(116, 172, 18);
+}
+
+main a:active
+{
+    color: rgb(251, 255, 136);
+} */
