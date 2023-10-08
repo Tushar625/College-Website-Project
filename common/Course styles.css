@@ -155,7 +155,7 @@ works with spc-img flex box */
 
 .person p
 {
-	width: max-content;
+	width: fit-content;
 }
 
 /* name of each department in faculty */
