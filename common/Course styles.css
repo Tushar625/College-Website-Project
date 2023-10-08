@@ -153,6 +153,11 @@ works with spc-img flex box */
     align-items: center;
 }
 
+.person p
+{
+	width: max-content;
+}
+
 /* name of each department in faculty */
 
 .dep
