@@ -150,13 +150,16 @@ works with spc-img flex box */
     width: 27em;
     margin: 1em;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+	align-self: stretch;
+	text-align: center;
 }
 
-.person p
+/* .person p
 {
-	width: fit-content;
-}
+	align-self: stretch;
+	text-align: center;
+} */
 
 /* name of each department in faculty */
 
