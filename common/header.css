@@ -7,7 +7,6 @@ header
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
-    position: sticky;
 }
 
 /* img and div are two flex items of header flex box */
