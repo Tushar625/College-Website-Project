@@ -55,7 +55,7 @@ body
 
 main
 {
-    height: 100dvh;
+    min-height: 100vh;
 }
 
 a
